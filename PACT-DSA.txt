@@ -1,0 +1,5 @@
+#Notes from PACT
+1. How algorithms manipulate information contained within data structures
+2. How data is arranged in memory.
+3. What the performance characteristics of a particular data structures are ?
+
