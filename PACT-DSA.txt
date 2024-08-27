@@ -3,3 +3,12 @@
 2. How data is arranged in memory.
 3. What the performance characteristics of a particular data structures are ?
 
+27 Aug 2024:
++++++++++++++
+
+Variable Scope:
+===============
+it is important to understand the scoping rules of a variables inside functions. Each time a function executes, a new local namespace is created. This represents a local environment athat contains the names of the parameters and variables that are assigned by the function.
+- To resolve a namespace when a function is called, the python interpreter first searches the local namespace (that is, the function itself) and if no match is found, it  searches the global namespace. 
+- theis global namespace is the mosule in which the function was defined. if the name is still not found it searches the built-in namespace. Finally if it fails, then the interpreter raises a name error exception.
+
