@@ -1,0 +1,11 @@
+"""
+In nature of mathematics, you can find the topic self-similarity or recurring structures, such as snowflakes, fractals, and julia sets, whicha re interesting 
+graphical formations.
+
+Recursion meaning: That things repeat or resemble each other.
+Related to methods, this means that they call themselves. 
+Important: Therefore is a termination condition in the form of special input values, which leads to the end of the self calls.
+
+"""
+
+Recursive:
