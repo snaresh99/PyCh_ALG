@@ -17,3 +17,8 @@ How to capture single analog input on NI DAQ using nidaqmx library:?
 
 1. Install nidaqmx library
 2. pip install nidaqmx library
+
+Important Library to learn and test various inputs and outputs:
+
+https://www.youtube.com/watch?v=umXMrr6Z0Og
+
