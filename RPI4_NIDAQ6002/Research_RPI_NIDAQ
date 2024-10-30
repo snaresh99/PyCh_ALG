@@ -10,4 +10,10 @@ To enable wifi on raspberry pi 4. See the below URL:
 
 https://www.seeedstudio.com/blog/2021/01/25/three-methods-to-configure-raspberry-pi-wifi/#:~:text=Step%201:%20Install%20the%20latest,card%20for%20your%20Raspberry%20Pi!
 
+30 Oct 2024:
+++++++++++++++
 
+How to capture single analog input on NI DAQ using nidaqmx library:?
+
+1. Install nidaqmx library
+2. pip install nidaqmx library
