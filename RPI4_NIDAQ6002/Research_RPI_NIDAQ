@@ -1,0 +1,66 @@
+Albert referred very nice links to play with Raspberry Pi 4 and 5:
+https://www.raspberrypi.com/software/connect/
+
+https://pinout.xyz/pinout/pin19_gpio10/
+
+https://www.youtube.com/watch?v=iL_oZGHLHvU
+Above link is very helpful.
+
+To enable wifi on raspberry pi 4. See the below URL:
+
+https://www.seeedstudio.com/blog/2021/01/25/three-methods-to-configure-raspberry-pi-wifi/#:~:text=Step%201:%20Install%20the%20latest,card%20for%20your%20Raspberry%20Pi!
+
+30 Oct 2024:
+++++++++++++++
+
+How to capture single analog input on NI DAQ using nidaqmx library:?
+
+1. Install nidaqmx library
+2. pip install nidaqmx library
+
+Important Library to learn and test various inputs and outputs:
+
+https://www.youtube.com/watch?v=umXMrr6Z0Og
+
+30 Oct 2024:
+https://pythonhosted.org/PyDAQmx/usage.html
+
+Important Links to refer to on PyDAQmx:
+https://pythonhosted.org/PyDAQmx/usage.html
+
+import PyDAQmx
+
+# Create a task
+task = PyDAQmx.Task()
+
+# Add an analog input voltage channel
+task.CreateAIVoltageChan("Dev1/ai0", "", PyDAQmx.DAQmx_Val_Cfg_Default, -10.0, 10.0, PyDAQmx.DAQmx_Val_Volts, None)
+
+# Start the task
+task.StartTask()
+
+# Read a single sample
+data = PyDAQmx.float64()
+task.ReadAnalogScalarF64(10.0, PyDAQmx.byref(data), None)
+
+# Stop the task
+task.StopTask()
+
+# Print the data
+print(data.value)
+Explanation
+Import PyDAQmx: Import the necessary PyDAQmx library to interact with your National Instruments data acquisition device.
+Create a Task: Create a task object, which represents a collection of operations that will be performed on your DAQ device.
+Add an AI Voltage Channel: Use the CreateAIVoltageChan method to add an analog input voltage channel to your task. Provide the following arguments:
+Physical Channel: The physical channel name on your DAQ device (e.g., "Dev1/ai0").
+Name: An optional name for the channel within your task.
+Terminal Configuration: Specify how the channel's input signal is referenced (e.g., DAQmx_Val_Cfg_Default for default configuration).
+Minimum Value: The minimum voltage value that can be measured on the channel.
+Maximum Value: The maximum voltage value that can be measured on the channel.
+Units: The units of the measured voltage (e.g., DAQmx_Val_Volts for volts).
+Custom Scale Name: An optional name for a custom scale to apply to the channel.
+Start the Task: Start the task to begin data acquisition.
+Read Data: Use the ReadAnalogScalarF64 method to read a single voltage value from the channel.
+Stop the Task: Stop the task to halt data acquisition.
+Print the Data: Print the acquired voltage value.
+
