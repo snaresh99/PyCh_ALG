@@ -6,3 +6,4 @@ def my function():
 my_function()
 print(a) => 11
 print(b) => 20
+RPI4_NIDAQ6002.ipynb
