@@ -60,11 +60,43 @@ class Sample:
         )
     
     def classify(self, classification:str) -> None:
-        self.classification = classification
+        s
+        * Thelf.classification = classification
 
     def matches(self) -> bool:
         return self.species == self.classification
     
+"""
+It also seems clear the training data class is an acceptable place to record the various hyperparameter trials.
+This means the training data class can identify which of the hyperparameter trials. This means the training data class can identify,
+which of the hyperparameter instances has a value of k that classifies irises with the highest accuracy.
+
+This means the training data class can identify which of the hyperparameter trials. This means the training data class can identify
+which of the hyperaparameter instances has a value of k that classifies irises with the highest accuracy.
+* There are multiple, related state changes here.
+* In this case, both the hyperparameter and training data classes will do part of the work.
+* The system as a whole will change state as individual elements change state.
+* This is sometimes referred to as emergent behavior.
+
+* Rather than writing a monster class that does many things, we've written smaller classes that collaborate to achieve the expected goals.
+
+"""
+
+class Hyperparameter:
+    """ A hyperparameter value and the overall quality of the 
+    classification."""
+
+    def __init__(self, k:int, training: "TrainngData")-> None:
+        self.k = k
+        self.data = weakref.ReferenceType["TrainingData"] = weakref.ref(training)
+        self.quality: float
+    """
+    Note: How we write type hints for classes not yet defined.
+    When a class is defined later in the file, any reference ot hte yet to be defined class is a forward reference.
+    The forward references to the not yet defined Training Data class are provided as strings, not the simple class name.
+    When mypy is analyzing the code, it resolves the strings into proper class names.
+    
+    """
 
 if __name__ == "__main__":
     s2 = Sample(sepal_length=5.1, sepal_width=3.5, petal_length=1.4, petal_width=0.2, species="Iris-setosa")
