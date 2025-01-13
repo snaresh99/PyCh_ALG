@@ -34,4 +34,7 @@ Steps to commit to Git hub: Examples of commands:
 
   # How to undo git:
   https://lcolladotor.github.io/2020/03/18/you-just-committed-a-large-file-and-can-t-push-to-github/
+
+  $ git reset --soft HEAD~1
+
   
